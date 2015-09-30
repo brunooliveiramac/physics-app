@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:hardwareAccelerated="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MaterialActivity"/>
-        <activity android:name=".RefractionActivity"/>
+        <activity android:name=".RefractionActivity"
+            android:hardwareAccelerated="false"/>
     </application>
 
 </manifest>

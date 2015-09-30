@@ -32,7 +32,7 @@ public class ResourceHelper {
         }
     }
 
-    public void getResourceAsImageBase64(String uri) {
+    public void getResourceAsImageBase64(String uri){
         try {
             URL url = new URL(uri);
             InputStream stream = url.openConnection().getInputStream();
@@ -51,7 +51,6 @@ public class ResourceHelper {
         ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
         int bufferSize = 1024;
         byte[] buffer = new byte[bufferSize];
-
         int len = 0;
         while ((len = inputStream.read(buffer)) != -1) {
             byteBuffer.write(buffer, 0, len);

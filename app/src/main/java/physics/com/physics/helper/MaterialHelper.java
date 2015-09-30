@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import physics.com.physics.MaterialActivity;
 import physics.com.physics.R;
 import physics.com.physics.RefractionActivity;
 
@@ -49,6 +50,7 @@ public class MaterialHelper {
             @Override
             public void onClick(View v) {
                 callIntent(activity, RefractionActivity.class);
+
             }
         });
 

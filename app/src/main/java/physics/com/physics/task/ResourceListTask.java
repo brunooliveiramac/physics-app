@@ -34,7 +34,7 @@ public class ResourceListTask extends AsyncTask<Object, Object, byte[]> {
 
     @Override
     protected byte[] doInBackground(Object... params) {
-        final String url = "http://192.168.0.108:8080/physics-api/content/1/images";
+        final String url = "http://192.168.1.35:8080/physics-api/content/1/images";
         try {
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());

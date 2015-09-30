@@ -17,5 +17,8 @@ public class MaterialActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.material_layout);
         helper.initializeElements();
+
+
+
     }
 }
