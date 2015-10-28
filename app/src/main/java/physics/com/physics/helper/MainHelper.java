@@ -17,6 +17,7 @@ public class MainHelper {
     private TextView txtCredits;
     private TextView txtMaterial;
 
+
     public MainHelper(Activity activity) {
         this.activity = activity;
     }

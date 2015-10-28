@@ -84,6 +84,13 @@
                     android:layout_toRightOf="@+id/image_test"
                     android:layout_below="@+id/text_content"/>
 
+                <com.google.android.youtube.player.YouTubePlayerView
+                    android:id="@+id/youtube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.youtube.player.YouTubePlayerView>
+
             </RelativeLayout>
 
 
