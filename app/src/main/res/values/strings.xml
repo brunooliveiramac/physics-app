@@ -21,6 +21,8 @@ Suspendisse sit amet arcu orci. Nulla tincidunt metus dapibus lacinia euismod. S
 	    <b><u>v2</u></b> Velocidade do raio refratado. No sistema internacional (SI) sua unidade de medidas é metros por segundo (m/s).\n\n
 </string>
 
+    <string name="titulo_teste">Titulo que eu quero por</string>
+
     <string name="teste2">
         <b>Que ao final da aula o aluno entenda os principais aspectos da refração de uma onda (seja ela mecânica ou eletromagnética).</b>\n\n
         o	Definir o termo refração;\n

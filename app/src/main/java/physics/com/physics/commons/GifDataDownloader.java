@@ -7,11 +7,15 @@ package physics.com.physics.commons;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.felipecsl.gifimageview.library.GifImageView;
+
 public class GifDataDownloader extends AsyncTask<String, Void, byte[]> {
 
     private static final String TAG = "GifDataDownloader";
+    private GifImageView gif;
 
-    public GifDataDownloader() {
+    public GifDataDownloader(GifImageView view) {
+        this.gif = view;
     }
 
     @Override
@@ -29,5 +33,12 @@ public class GifDataDownloader extends AsyncTask<String, Void, byte[]> {
         }
 
         return gif;
+    }
+
+    @Override
+    protected void onPostExecute(final byte[] bytes) {
+        super.onPostExecute(bytes);
+        gif.setBytes(bytes);
+        gif.startAnimation();
     }
 }

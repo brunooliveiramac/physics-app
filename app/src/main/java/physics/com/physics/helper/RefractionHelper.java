@@ -1,14 +1,13 @@
 package physics.com.physics.helper;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.felipecsl.gifimageview.library.GifImageView;
+
 import physics.com.physics.R;
+import physics.com.physics.commons.GifDataDownloader;
 import physics.com.physics.task.ResourceImageTask;
 
 /**
@@ -19,11 +18,12 @@ public class RefractionHelper {
     private Activity activity;
     private ResourceHelper resourceHelper;
     private ImageView imageTest;
+    private GifImageView gifTest;
     private ImageView imageTest2;
     private ImageView imageTest3;
     private TextView bodyText1;
 
-
+    private static final String BASE_URL = "http://ec2-52-23-232-114.compute-1.amazonaws.com:8080/physics-api/content";
 
     public RefractionHelper(Activity activity) {
         this.activity = activity;
@@ -35,17 +35,14 @@ public class RefractionHelper {
         imageTest = (ImageView) activity.findViewById(R.id.image_test);
         imageTest2 = (ImageView) activity.findViewById(R.id.image_test2);
         imageTest3 = (ImageView) activity.findViewById(R.id.image_test3);
+        gifTest = (GifImageView) activity.findViewById(R.id.gifImageView);
         bodyText1 = (TextView) activity.findViewById(R.id.text_content);
         bodyText1.setText(R.string.teste2);
 
-
-
-
-        new ResourceImageTask(imageTest, "http://192.168.1.32:8080/physics-api/content/1/image/8")
+        new ResourceImageTask(imageTest, BASE_URL + "/2/image/1")
                 .execute();
 
+        new GifDataDownloader(gifTest)
+                .execute(BASE_URL + "/2/animation/1");
     }
-
-
-
 }
