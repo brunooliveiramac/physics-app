@@ -36,6 +36,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'commons-io:commons-io:2.4'
-    compile files('libs/droidpersistence.jar')
-    compile files('build/generated/source/r/debug/physics/com/physics/lib/YouTubeAndroidPlayerApi.jar')
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }

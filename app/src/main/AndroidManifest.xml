@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".MaterialActivity"/>
         <activity android:name=".RefractionActivity"
-            android:hardwareAccelerated="false"/>
+            android:hardwareAccelerated="true"/>
+        <activity android:name=".VideosActivity" />
     </application>
 
 </manifest>
