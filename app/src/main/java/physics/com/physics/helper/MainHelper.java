@@ -8,6 +8,7 @@ import android.widget.TextView;
 import physics.com.physics.MaterialActivity;
 import physics.com.physics.R;
 import physics.com.physics.VideosActivity;
+import physics.com.physics.YoutubeActivity;
 
 /**
  * Created by bruno on 28/08/15.
@@ -51,7 +52,7 @@ public class MainHelper {
     }
 
     private void callVideosSection() {
-        Intent goToVideos = new Intent(activity, VideosActivity.class);
+        Intent goToVideos = new Intent(activity, YoutubeActivity.class);
         activity.startActivity(goToVideos);
     }
 

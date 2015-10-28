@@ -3,12 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".VideosActivity">
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+    <fragment
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+        android:id="@+id/youtube_frame"
+        android:layout_width="300dp"
+        android:layout_height="200dp" />
 
 </RelativeLayout>

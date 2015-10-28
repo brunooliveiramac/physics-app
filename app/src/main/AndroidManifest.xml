@@ -23,6 +23,7 @@
         <activity android:name=".RefractionActivity"
             android:hardwareAccelerated="true"/>
         <activity android:name=".VideosActivity" />
+        <activity android:name=".YoutubeActivity" />
     </application>
 
 </manifest>

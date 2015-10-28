@@ -2,6 +2,9 @@ package physics.com.physics;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+
+import physics.com.physics.fragments.YoutubePlayerFragment;
 import physics.com.physics.helper.RefractionHelper;
 
 
@@ -17,6 +20,9 @@ public class RefractionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.general_info_layout);
         helper.initializeElements();
+
+//        YoutubePlayerFragment ytFragment = YoutubePlayerFragment.newInstance("fI757OOTZfM");
+//        this.getSupportFragmentManager().beginTransaction().replace(R.id.youtube_frame, ytFragment).commit();
 
     }
 }

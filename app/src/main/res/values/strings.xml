@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Physics</string>
+    <string name="DEVELOPER_KEY">AIzaSyCxiUa4wRlUwaJ_x20EsLvUrPq0HFz0ego</string>
 
     <string name="menu_credits">Créditos</string>
     <string name="menu_material">Material Didático</string>
     <string name="action_settings">Configurações</string>
     <string name="material_instructions">Selecione um dos módulos ao lado para continuar</string>
     <string name="menu_videos">Vídeos</string>
+    <string name="video_list_title">video title</string>
     <string name="dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a ullamcorper nisl, vitae cursus augue. Sed molestie maximus nulla, nec sollicitudin dolor posuere non. Nulla sem lacus, dignissim vel ornare convallis, commodo sed odio. Curabitur tincidunt nibh tortor, ac blandit quam tempor eu. Donec pretium nunc nisi, quis mattis augue imperdiet semper. Maecenas efficitur elementum dui et sagittis. Cras vitae erat aliquet, hendrerit quam nec, bibendum ipsum. Proin aliquet, ante rhoncus eleifend laoreet, lorem lectus condimentum est, eu ultrices sem mi eget elit. Etiam et metus ipsum. Praesent aliquet lacinia justo eget mattis. Nulla facilisi. Nullam a rutrum justo, vitae ultrices lectus. Sed id tincidunt risus, quis luctus ante.
 
 Phasellus elementum justo a lacus tempor, nec ultricies urna ultricies. Pellentesque ac maximus libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam vehicula tellus justo, nec feugiat risus suscipit ut. Phasellus nec lorem at orci consectetur bibendum sollicitudin quis magna. Aenean vehicula rutrum turpis et iaculis. Cras suscipit auctor scelerisque. Phasellus a risus luctus, gravida mauris et, aliquet lorem. Donec hendrerit metus sed tortor congue rutrum. Sed id lobortis ex, nec consectetur lectus. Vestibulum volutpat neque et leo bibendum molestie. Pellentesque pellentesque felis ut odio pretium maximus non nec turpis. In rhoncus massa eu augue facilisis tincidunt nec vel risus. Integer convallis vestibulum turpis vel efficitur. Cras id arcu in quam semper tempus et eget lorem. Donec a lorem auctor, iaculis neque vitae, aliquam metus.
