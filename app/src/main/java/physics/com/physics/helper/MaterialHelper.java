@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import physics.com.physics.MaterialActivity;
-import physics.com.physics.R;
+import physics.com.physics.ReflectionActivity;
 import physics.com.physics.RefractionActivity;
+import physics.com.physics.R;
 
 /**
  * Created by bruno on 28/08/15.
@@ -42,7 +42,7 @@ public class MaterialHelper {
         clickableAreaReflection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeToast("Refração");
+                callIntent(activity, ReflectionActivity.class);
             }
         });
 

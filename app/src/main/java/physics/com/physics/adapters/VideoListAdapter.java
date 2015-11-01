@@ -16,7 +16,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import physics.com.physics.R;
+import physics.com.physics.content.RefractionYouTubeContent;
 import physics.com.physics.content.YouTubeContent;
+import physics.com.physics.model.YouTubeVideo;
 
 /**
  * Created by bruno on 28/10/15.
@@ -25,20 +27,24 @@ public class VideoListAdapter extends BaseAdapter implements YouTubeThumbnailVie
 
     private Context mContext;
     private Map<View, YouTubeThumbnailLoader> mLoaders;
+    private YouTubeContent content;
 
-    public VideoListAdapter(final Context context) {
+    public VideoListAdapter(final Context context, YouTubeContent content) {
         this.mContext = context;
         this.mLoaders = new HashMap<>();
+        this.content = content;
     }
 
     @Override
     public int getCount() {
-        return YouTubeContent.ITEMS.size();
+//        return RefractionYouTubeContent.ITEMS.size();
+        return content.getITEMS().size();
     }
 
     @Override
     public Object getItem(int position) {
-        return YouTubeContent.ITEMS.get(position);
+//        return RefractionYouTubeContent.ITEMS.get(position);
+        return content.getITEMS().get(position);
     }
 
     @Override
@@ -52,8 +58,9 @@ public class VideoListAdapter extends BaseAdapter implements YouTubeThumbnailVie
         View currentRow = convertView;
         VideoHolder holder;
 
-        final YouTubeContent.YouTubeVideo item = YouTubeContent.ITEMS.get(position);
+//        final YouTubeVideo item = RefractionYouTubeContent.ITEMS.get(position);
 
+        final YouTubeVideo item = content.getITEMS().get(position);
         if(currentRow == null) {
             //Create the row
             final LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
