@@ -3,6 +3,7 @@ package physics.com.physics.helper;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
+import physics.com.physics.commons.ResourceException;
 import physics.com.physics.model.Image;
 
 /**
@@ -27,6 +29,7 @@ public class ResourceHelper {
             URL url = new URL(uri);
             InputStream stream = url.openConnection().getInputStream();
             imageInBytes = getBytes(stream);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -42,9 +45,15 @@ public class ResourceHelper {
         }
     }
 
-    public void setImageOnUI(ImageView view) {
-        Bitmap bt = BitmapFactory.decodeByteArray(imageInBytes, 0, imageInBytes.length);
-        view.setImageBitmap(bt);
+    public void setImageOnUI(ImageView view) throws ResourceException{
+        try {
+            Bitmap bt = BitmapFactory.decodeByteArray(imageInBytes, 0, imageInBytes.length);
+            view.setImageBitmap(bt);
+        } catch (Exception ex) {
+            throw new ResourceException(
+                    "An connection or uri problem has occurred, please check if server is up and running", ex);
+        }
+
     }
 
     private byte[] getBytes(InputStream inputStream) throws IOException {

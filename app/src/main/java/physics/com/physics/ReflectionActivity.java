@@ -10,6 +10,7 @@ import android.view.Menu;
 import physics.com.physics.adapters.ViewPagerAdapter;
 import physics.com.physics.fragments.OneFragment;
 import physics.com.physics.fragments.ReflectionMaterialFragment;
+import physics.com.physics.fragments.ReflectionTestFragment;
 import physics.com.physics.fragments.ReflectionVideosFragment;
 import physics.com.physics.fragments.TwoFragment;
 
@@ -43,7 +44,7 @@ public class ReflectionActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ReflectionMaterialFragment(), getResources().getString(R.string.tab_material));
         adapter.addFragment(new ReflectionVideosFragment(), getResources().getString(R.string.tab_videos));
-        adapter.addFragment(new OneFragment(), getResources().getString(R.string.tab_tests));
+        adapter.addFragment(new ReflectionTestFragment(), getResources().getString(R.string.tab_tests));
         viewPager.setAdapter(adapter);
     }
 

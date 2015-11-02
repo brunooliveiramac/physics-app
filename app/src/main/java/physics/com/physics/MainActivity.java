@@ -1,25 +1,41 @@
 package physics.com.physics;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import physics.com.physics.helper.MainHelper;
+import physics.com.physics.util.ConnectionDetector;
 
 
 public class MainActivity extends Activity {
 
     private MainHelper helper = new MainHelper(MainActivity.this);
+    private ConnectionDetector connectionDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        connectionDetector = new ConnectionDetector(this);
 //        setContentView(R.layout.activity_main);
         setContentView(R.layout.alternative_activity_main);
 
         helper.initializeElements();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(!connectionDetector.isConnected()) {
+//            Toast.makeText(this, "Você precisa estar conectado a internet", Toast.LENGTH_LONG).show();
+            connectionDetector.wifiChangeDialogBuilder();
+        }
+
     }
 
     @Override
