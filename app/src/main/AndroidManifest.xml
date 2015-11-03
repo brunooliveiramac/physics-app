@@ -30,6 +30,7 @@
         <activity android:name=".QuestionsActivity" />
         <activity android:name=".RefractionActivity" />
         <activity android:name=".ReflectionActivity" />
+        <activity android:name=".DiffractionActivity"/>
     </application>
 
 </manifest>

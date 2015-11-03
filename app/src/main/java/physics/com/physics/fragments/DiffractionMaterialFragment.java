@@ -8,17 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import physics.com.physics.R;
-import physics.com.physics.helper.ReflectionHelper;
+import physics.com.physics.helper.DiffractionHelper;
 
 /**
- * Created by bruno on 31/10/15.
+ * Created by bruno on 03/11/15.
  */
-public class ReflectionMaterialFragment extends Fragment {
+public class DiffractionMaterialFragment extends Fragment {
 
     private View view;
-    private ReflectionHelper helper;
+    private DiffractionHelper helper;
 
-    public ReflectionMaterialFragment() {
+    public DiffractionMaterialFragment() {
 
     }
 
@@ -30,9 +30,9 @@ public class ReflectionMaterialFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.reflection_material_layout, container, false);
+        view = inflater.inflate(R.layout.diffraction_material_layout, container, false);
 
-        helper = new ReflectionHelper(view);
+        helper = new DiffractionHelper(view);
         helper.initializeUIElements();
 
         return view;

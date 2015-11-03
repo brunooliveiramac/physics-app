@@ -2,7 +2,6 @@ package physics.com.physics;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import com.google.android.youtube.player.YouTubeApiServiceUtil;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -14,7 +13,7 @@ public class YoutubeActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.youtube_layout);
+        setContentView(R.layout.refraction_youtube_layout);
 
         //Check for any issues
         final YouTubeInitializationResult result = YouTubeApiServiceUtil.isYouTubeApiServiceAvailable(this);

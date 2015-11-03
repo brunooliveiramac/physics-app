@@ -13,11 +13,11 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import physics.com.physics.R;
 
 /**
- * Created by bruno on 30/10/15.
+ * Created by bruno on 03/11/15.
  */
-public class RefractionVideosFragment extends Fragment {
+public class DiffractionVideosFragment extends Fragment {
 
-    public RefractionVideosFragment() {
+    public DiffractionVideosFragment() {
 
     }
 
@@ -29,8 +29,7 @@ public class RefractionVideosFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.refraction_youtube_layout, container, false);
-
+        View view = inflater.inflate(R.layout.diffraction_youtube_layout, container, false);
         //Check for any issues
         final YouTubeInitializationResult result = YouTubeApiServiceUtil.isYouTubeApiServiceAvailable(getActivity());
 
@@ -38,6 +37,7 @@ public class RefractionVideosFragment extends Fragment {
             //If there are any issues we can show an error dialog.
             result.getErrorDialog(getActivity(), 0).show();
         }
+
         return view;
     }
 }

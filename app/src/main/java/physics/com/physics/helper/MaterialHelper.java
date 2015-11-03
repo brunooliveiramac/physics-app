@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import physics.com.physics.DiffractionActivity;
 import physics.com.physics.ReflectionActivity;
 import physics.com.physics.RefractionActivity;
 import physics.com.physics.R;
@@ -57,7 +58,7 @@ public class MaterialHelper {
         clickableAreaDiffraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeToast("Difração");
+                callIntent(activity, DiffractionActivity.class);
             }
         });
 
