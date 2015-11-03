@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import physics.com.physics.RefractionActivity;
 import physics.com.physics.MaterialActivity;
 import physics.com.physics.R;
 import physics.com.physics.YoutubeActivity;
+import physics.com.physics.util.ConnectionDetector;
 
 /**
  * Created by bruno on 28/08/15.
@@ -40,15 +42,18 @@ public class MainHelper {
         txtMaterial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callMaterialSection();
+                if(!new ConnectionDetector(activity).isConnected()){
+                    Toast.makeText(activity, "Você precisa estar conectado a internet para acessar o conteúdo",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    callMaterialSection();
+                }
             }
         });
     }
 
     private void callCreditsSection() {
         //TODO implement credits intent
-        Intent intent = new Intent(activity, RefractionActivity.class);
-        activity.startActivity(intent);
     }
 
     private void callMaterialSection() {

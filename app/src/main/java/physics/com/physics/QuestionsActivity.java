@@ -2,6 +2,7 @@ package physics.com.physics;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -11,12 +12,12 @@ import java.util.List;
 /**
  * Created by bruno on 29/10/15.
  */
-public class QuestionsActivity extends Activity {
+public class QuestionsActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.questions_layout);
+        setContentView(R.layout.test_layout);
 
         List<String> correctAnwsers = fillCorrectAnwsers();
         List<String> userAnswers = fillUserAnwsers();
