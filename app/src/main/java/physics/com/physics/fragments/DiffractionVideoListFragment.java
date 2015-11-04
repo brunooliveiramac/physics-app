@@ -40,7 +40,7 @@ public class DiffractionVideoListFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         final Context context = getActivity();
         final String DEV_KEY = getResources().getString(R.string.DEVELOPER_KEY);
-        final YouTubeVideo video = new RefractionYouTubeContent().getITEMS().get(position);
+        final YouTubeVideo video = new DiffractionYouTubeContent().getITEMS().get(position);
 
         startActivity(YouTubeStandalonePlayer.createVideoIntent(getActivity(),
                 DEV_KEY, video.id, 0, true, true));

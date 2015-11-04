@@ -37,13 +37,11 @@ public class VideoListAdapter extends BaseAdapter implements YouTubeThumbnailVie
 
     @Override
     public int getCount() {
-//        return RefractionYouTubeContent.ITEMS.size();
         return content.getITEMS().size();
     }
 
     @Override
     public Object getItem(int position) {
-//        return RefractionYouTubeContent.ITEMS.get(position);
         return content.getITEMS().get(position);
     }
 
@@ -57,8 +55,6 @@ public class VideoListAdapter extends BaseAdapter implements YouTubeThumbnailVie
 
         View currentRow = convertView;
         VideoHolder holder;
-
-//        final YouTubeVideo item = RefractionYouTubeContent.ITEMS.get(position);
 
         final YouTubeVideo item = content.getITEMS().get(position);
         if(currentRow == null) {

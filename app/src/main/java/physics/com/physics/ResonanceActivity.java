@@ -6,24 +6,22 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-
 import physics.com.physics.adapters.ViewPagerAdapter;
 import physics.com.physics.fragments.OneFragment;
-import physics.com.physics.fragments.RefractionMaterialFragment;
-import physics.com.physics.fragments.RefractionVideosFragment;
+import physics.com.physics.fragments.ResonanceMaterialFragment;
+import physics.com.physics.fragments.ResonanceVideosFragment;
 
 /**
- * Created by bruno on 30/10/15.
+ * Created by bruno on 04/11/15.
  */
-@SuppressWarnings("deprecation")
-public class RefractionActivity extends AppCompatActivity {
+public class ResonanceActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_layout);
 
@@ -41,8 +39,8 @@ public class RefractionActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new RefractionMaterialFragment(), getResources().getString(R.string.tab_material));
-        adapter.addFragment(new RefractionVideosFragment(), getResources().getString(R.string.tab_videos));
+        adapter.addFragment(new ResonanceMaterialFragment(), getResources().getString(R.string.tab_material));
+        adapter.addFragment(new ResonanceVideosFragment(), getResources().getString(R.string.tab_videos));
         adapter.addFragment(new OneFragment(), getResources().getString(R.string.tab_tests));
         viewPager.setAdapter(adapter);
     }

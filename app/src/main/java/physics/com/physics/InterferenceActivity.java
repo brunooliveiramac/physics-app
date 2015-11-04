@@ -8,15 +8,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import physics.com.physics.adapters.ViewPagerAdapter;
+import physics.com.physics.fragments.DiffractionMaterialFragment;
+import physics.com.physics.fragments.DiffractionVideosFragment;
+import physics.com.physics.fragments.InterferenceMaterialFragment;
+import physics.com.physics.fragments.InterferenceVideosFragment;
 import physics.com.physics.fragments.OneFragment;
-import physics.com.physics.fragments.RefractionMaterialFragment;
-import physics.com.physics.fragments.RefractionVideosFragment;
+import physics.com.physics.fragments.TwoFragment;
 
 /**
- * Created by bruno on 30/10/15.
+ * Created by bruno on 04/11/15.
  */
-@SuppressWarnings("deprecation")
-public class RefractionActivity extends AppCompatActivity {
+public class InterferenceActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -41,8 +43,8 @@ public class RefractionActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new RefractionMaterialFragment(), getResources().getString(R.string.tab_material));
-        adapter.addFragment(new RefractionVideosFragment(), getResources().getString(R.string.tab_videos));
+        adapter.addFragment(new InterferenceMaterialFragment(), getResources().getString(R.string.tab_material));
+        adapter.addFragment(new InterferenceVideosFragment(), getResources().getString(R.string.tab_videos));
         adapter.addFragment(new OneFragment(), getResources().getString(R.string.tab_tests));
         viewPager.setAdapter(adapter);
     }

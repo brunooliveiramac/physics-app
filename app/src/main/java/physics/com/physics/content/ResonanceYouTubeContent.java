@@ -8,9 +8,9 @@ import java.util.Map;
 import physics.com.physics.model.YouTubeVideo;
 
 /**
- * Created by bruno on 31/10/15.
+ * Created by bruno on 04/11/15.
  */
-public class ReflectionYouTubeContent implements YouTubeContent {
+public class ResonanceYouTubeContent implements YouTubeContent {
 
 
     /**
@@ -18,24 +18,23 @@ public class ReflectionYouTubeContent implements YouTubeContent {
      */
     private List<YouTubeVideo> ITEMS = new ArrayList<>();
 
-
     /**
      * A map of YouTube videos, by ID.
      */
     private Map<String, YouTubeVideo> ITEM_MAP = new HashMap<>();
 
-    public ReflectionYouTubeContent() {
-        addItem(new YouTubeVideo("fj_LaS2JWUk", "Vídeo 1 - teste teste teste"));
-        addItem(new YouTubeVideo("YhgkqnhicKk", "Vídeo 2 - teste teste teste"));
+    public ResonanceYouTubeContent() {
+        addItem(new YouTubeVideo("3MxkUqUEijY", "Video teste resonancia"));
     }
 
-    public void addItem(final YouTubeVideo item) {
+    @Override
+    public void addItem(YouTubeVideo item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
     }
 
+    @Override
     public List<YouTubeVideo> getITEMS() {
         return ITEMS;
     }
-
 }

@@ -8,9 +8,11 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import physics.com.physics.DiffractionActivity;
+import physics.com.physics.InterferenceActivity;
 import physics.com.physics.ReflectionActivity;
 import physics.com.physics.RefractionActivity;
 import physics.com.physics.R;
+import physics.com.physics.ResonanceActivity;
 
 /**
  * Created by bruno on 28/08/15.
@@ -65,14 +67,14 @@ public class MaterialHelper {
         clickableAreaResonance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeToast("Ressonância");
+                callIntent(activity, ResonanceActivity.class);
             }
         });
 
         clickableAreaInterference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeToast("Interferência");
+                callIntent(activity, InterferenceActivity.class);
             }
         });
     }

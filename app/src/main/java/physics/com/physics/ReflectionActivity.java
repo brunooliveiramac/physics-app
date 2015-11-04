@@ -8,11 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import physics.com.physics.adapters.ViewPagerAdapter;
-import physics.com.physics.fragments.OneFragment;
 import physics.com.physics.fragments.ReflectionMaterialFragment;
 import physics.com.physics.fragments.ReflectionTestFragment;
 import physics.com.physics.fragments.ReflectionVideosFragment;
-import physics.com.physics.fragments.TwoFragment;
 
 /**
  * Created by bruno on 31/10/15.
@@ -26,7 +24,7 @@ public class ReflectionActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo_tab);
+        setContentView(R.layout.tab_layout);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

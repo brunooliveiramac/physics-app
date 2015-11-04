@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Physics</string>
     <string name="DEVELOPER_KEY">AIzaSyCxiUa4wRlUwaJ_x20EsLvUrPq0HFz0ego</string>
-    <string name="tab_material">MATERIAL</string>
+    <string name="tab_material">TEXTO</string>
     <string name="tab_videos">VÍDEOS</string>
-    <string name="tab_tests">TESTES</string>
+    <string name="tab_tests">EXERCÍCIOS</string>
 
     <string name="menu_credits">Créditos</string>
     <string name="menu_material">Material Didático</string>

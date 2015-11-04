@@ -1,7 +1,5 @@
 package physics.com.physics.fragments;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,9 +12,7 @@ import android.widget.TextView;
 import com.felipecsl.gifimageview.library.GifImageView;
 
 import physics.com.physics.R;
-import physics.com.physics.commons.GifDataDownloader;
 import physics.com.physics.helper.RefractionHelper;
-import physics.com.physics.task.ResourceImageTask;
 
 /**
  * Created by bruno on 30/10/15.
@@ -42,7 +38,7 @@ public class RefractionMaterialFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.general_info_layout, container, false);
+        view = inflater.inflate(R.layout.refraction_material_layout, container, false);
 
         helper = new RefractionHelper(view);
         helper.initializeElements();

@@ -21,19 +21,45 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:hardwareAccelerated="false">
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MaterialActivity"/>
-        <activity android:name=".YoutubeActivity" />
-        <activity android:name=".QuestionsActivity" />
-        <activity android:name=".RefractionActivity" />
-        <activity android:name=".ReflectionActivity" />
-        <activity android:name=".DiffractionActivity"/>
+        <activity android:name=".MaterialActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".YoutubeActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".QuestionsActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".RefractionActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".ReflectionActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".DiffractionActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".ResonanceActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
+
+        <activity android:name=".InterferenceActivity"
+            android:screenOrientation="landscape"
+            android:hardwareAccelerated="true"/>
     </application>
 
 </manifest>
