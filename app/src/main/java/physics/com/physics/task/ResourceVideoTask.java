@@ -40,7 +40,7 @@ public class ResourceVideoTask extends AsyncTask <Integer, Void, List<Video>> {
 
         try {
             int contentId = params[0];
-            final String uri = AppConfig.LOCAL_URI + "/content/" + contentId + "/videos";
+            final String uri = AppConfig.LOCAL_URI + "/videos/" + contentId;
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
             result = restTemplate.getForObject(uri, VideoResponse.class).getVideos();

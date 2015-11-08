@@ -45,7 +45,6 @@ public class InterferenceYouTubeContent implements YouTubeContent {
     private void fillVideoList() {
         try {
             content = new ResourceVideoTask().execute(CONTENT_CODE).get();
-//            new ResourceVideoTask(this).execute(CONTENT_CODE);
             for (Video v : content) {
                 addItem(new YouTubeVideo(v.getUri(), v.getTitle()));
             }
