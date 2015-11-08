@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import physics.com.physics.CreditsActivity;
 import physics.com.physics.RefractionActivity;
 import physics.com.physics.MaterialActivity;
 import physics.com.physics.R;
@@ -53,7 +54,8 @@ public class MainHelper {
     }
 
     private void callCreditsSection() {
-        //TODO implement credits intent
+        Intent goToCredits = new Intent(activity, CreditsActivity.class);
+        activity.startActivity(goToCredits);
     }
 
     private void callMaterialSection() {

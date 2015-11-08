@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import physics.com.physics.model.Video;
 import physics.com.physics.model.YouTubeVideo;
 
 /**
@@ -36,6 +37,11 @@ public class RefractionYouTubeContent implements YouTubeContent {
 
     public List<YouTubeVideo> getITEMS() {
         return ITEMS;
+    }
+
+    @Override
+    public void setContent(List<Video> content) {
+
     }
 
     // OLD

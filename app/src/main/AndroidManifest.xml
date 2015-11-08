@@ -58,8 +58,12 @@
             android:hardwareAccelerated="true"/>
 
         <activity android:name=".InterferenceActivity"
-            android:screenOrientation="landscape"
-            android:hardwareAccelerated="true"/>
+        android:screenOrientation="landscape"
+        android:hardwareAccelerated="true"/>
+
+        <activity android:name=".CreditsActivity"
+            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>

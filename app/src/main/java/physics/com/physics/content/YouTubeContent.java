@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import physics.com.physics.model.Video;
 import physics.com.physics.model.YouTubeVideo;
 
 /**
@@ -12,7 +13,7 @@ import physics.com.physics.model.YouTubeVideo;
  * Contract for YouTubeContent implementation classes
  */
 public interface YouTubeContent {
-
+    List<Video> content = new ArrayList<>();
     List<YouTubeVideo> ITEMS = new ArrayList<>();
     Map<String, YouTubeVideo> ITEM_MAP = new HashMap<>();
 
@@ -20,5 +21,7 @@ public interface YouTubeContent {
     void addItem(final YouTubeVideo item);
 
     List<YouTubeVideo> getITEMS();
+
+    void setContent(List<Video> content);
 
 }

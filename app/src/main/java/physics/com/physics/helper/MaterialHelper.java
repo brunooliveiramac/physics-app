@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import physics.com.physics.DiffractionActivity;
@@ -25,12 +27,16 @@ public class MaterialHelper {
     private LinearLayout clickableAreaDiffraction;
     private LinearLayout clickableAreaResonance;
     private LinearLayout clickableAreaInterference;
+    private ProgressBar progressBar;
+    private TextView loadingText;
 
     public MaterialHelper(Activity activity) {
         this.activity = activity;
     }
 
     public void initializeElements() {
+        loadingText = (TextView) activity.findViewById(R.id.material_loading_label);
+        progressBar = (ProgressBar) activity.findViewById(R.id.material_progress);
         clickableAreaReflection = (LinearLayout) activity.findViewById(R.id.clickable_area);
         clickableAreaRefraction = (LinearLayout) activity.findViewById(R.id.clickable_area2);
         clickableAreaDiffraction = (LinearLayout) activity.findViewById(R.id.clickable_area3);
@@ -74,13 +80,11 @@ public class MaterialHelper {
         clickableAreaInterference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
+                loadingText.setVisibility(View.VISIBLE);
                 callIntent(activity, InterferenceActivity.class);
             }
         });
-    }
-
-    private void makeToast(String section) {
-        Toast.makeText(activity, section + " menu clicked!", Toast.LENGTH_SHORT).show();
     }
 
     //Global method to call intents

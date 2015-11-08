@@ -11,7 +11,6 @@ import com.google.android.youtube.player.YouTubeStandalonePlayer;
 import physics.com.physics.R;
 import physics.com.physics.adapters.VideoListAdapter;
 import physics.com.physics.content.InterferenceYouTubeContent;
-import physics.com.physics.content.ReflectionYouTubeContent;
 import physics.com.physics.model.YouTubeVideo;
 
 /**

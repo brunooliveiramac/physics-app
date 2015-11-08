@@ -9,6 +9,7 @@
     android:background="@drawable/modules_background">
 
     <RelativeLayout
+        android:id="@+id/reflection_material_relative"
         android:layout_width="1000dp"
         android:layout_height="500dp"
         android:layout_marginTop="65dp"
