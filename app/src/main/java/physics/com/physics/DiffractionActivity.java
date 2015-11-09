@@ -8,9 +8,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 
 import physics.com.physics.adapters.ViewPagerAdapter;
 import physics.com.physics.fragments.DiffractionMaterialFragment;
+import physics.com.physics.fragments.DiffractionQuestionsFragment;
 import physics.com.physics.fragments.DiffractionVideosFragment;
 import physics.com.physics.fragments.OneFragment;
 import physics.com.physics.fragments.RefractionMaterialFragment;
@@ -43,11 +45,15 @@ public class DiffractionActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    public void onRadioButtonClicked(View v){
+
+    }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new DiffractionMaterialFragment(), getResources().getString(R.string.tab_material));
         adapter.addFragment(new DiffractionVideosFragment(), getResources().getString(R.string.tab_videos));
-        adapter.addFragment(new OneFragment(), getResources().getString(R.string.tab_tests));
+        adapter.addFragment(new DiffractionQuestionsFragment(), getResources().getString(R.string.tab_tests));
         viewPager.setAdapter(adapter);
     }
 

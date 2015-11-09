@@ -33,7 +33,7 @@ public class DiffractionMaterialFragment extends Fragment {
         view = inflater.inflate(R.layout.diffraction_material_layout, container, false);
 
         helper = new DiffractionHelper(view);
-        helper.initializeUIElements();
+       // helper.initializeUIElements();
 
         return view;
     }

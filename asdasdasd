@@ -1,0 +1,41 @@
+[33mcommit b004dcd46c1f82df75865761bfbab04ec15fd013[m
+Author: Bruno Ferrari <b_ferrari@live.com>
+Date:   Sun Nov 1 02:18:55 2015 -0200
+
+    Implemented tabs on material sections and modified ytAPI impl to work with several fragments
+
+[33mcommit b5f3cf65ed22d2c50bc9a04a348257cb681cb892[m
+Author: Bruno Ferrari <b_ferrari@live.com>
+Date:   Wed Oct 28 19:55:48 2015 -0200
+
+    implemented youtube api as well as youtube list videos on menu youtube
+
+[33mcommit 0c0ba0ca1f353da68f982485da0357edb95e0c4b[m
+Author: Bruno Ferrari <b_ferrari@live.com>
+Date:   Wed Oct 28 04:08:04 2015 -0200
+
+    youtube videos section created
+
+[33mcommit b0ef4b0ca298d7e4cedc57589815e3cc0c5e70db[m
+Author: Bruno Oliveira <brunooliveira.mac@gmail.com>
+Date:   Wed Oct 28 02:50:27 2015 -0200
+
+    video
+
+[33mcommit ea177df55051454e3011b90c232160c0d379d4c4[m
+Author: Bruno Ferrari <b_ferrari@live.com>
+Date:   Wed Oct 28 01:18:20 2015 -0200
+
+    bla bla bla
+
+[33mcommit da917c793db7e21342aff584bbd49384b3800c12[m
+Author: Bruno Oliveira <brunooliveira.mac@gmail.com>
+Date:   Wed Sep 30 02:45:24 2015 -0300
+
+    Implementação de Animação dos Gifs
+
+[33mcommit f0bdf76dc489b505288c00d3afc6284b651672a8[m
+Author: Bruno Ferrari <b_ferrari@live.com>
+Date:   Thu Sep 24 03:10:48 2015 -0300
+
+    first commit
