@@ -7,12 +7,15 @@ import java.util.Map;
 
 import physics.com.physics.model.Video;
 import physics.com.physics.model.YouTubeVideo;
+import physics.com.physics.task.ResourceVideoTask;
 
 /**
  * Created by bruno on 28/10/15.
  */
 public class RefractionYouTubeContent implements YouTubeContent {
 
+    private static final int CONTENT_CODE = 2;
+    private List<Video> content = new ArrayList<>();
     /**
      * An array of YouTube videos
      */
@@ -25,9 +28,18 @@ public class RefractionYouTubeContent implements YouTubeContent {
     private Map<String, YouTubeVideo> ITEM_MAP = new HashMap<>();
 
     public RefractionYouTubeContent() {
-        addItem(new YouTubeVideo("C18qzn7j4SM", "Um curso de git fera!"));
-        addItem(new YouTubeVideo("_Mir2_YlA0g", "Parte 2 do curso de git fera!"));
-        addItem(new YouTubeVideo("twNbUHFlwfE", "Parte 3 do curso de git fera!"));
+        this.fillVideoList();
+    }
+
+    private void fillVideoList() {
+        try {
+            content = new ResourceVideoTask().execute(CONTENT_CODE).get();
+            for (Video v : content) {
+                addItem(new YouTubeVideo(v.getUri(), v.getTitle()));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void addItem(final YouTubeVideo item) {
@@ -43,29 +55,4 @@ public class RefractionYouTubeContent implements YouTubeContent {
     public void setContent(List<Video> content) {
 
     }
-
-    // OLD
-//    /**
-//     * An array of YouTube videos
-//     */
-//    public static List<YouTubeVideo> ITEMS = new ArrayList<>();
-//
-//
-//    /**
-//     * A map of YouTube videos, by ID.
-//     */
-//    public static Map<String, YouTubeVideo> ITEM_MAP = new HashMap<>();
-//
-//
-//    static {
-//        addItem(new YouTubeVideo("C18qzn7j4SM", "Um curso de git fera!"));
-//        addItem(new YouTubeVideo("_Mir2_YlA0g", "Parte 2 do curso de git fera!"));
-//        addItem(new YouTubeVideo("twNbUHFlwfE", "Parte 3 do curso de git fera!"));
-//    }
-//
-//
-//    private static void addItem(final YouTubeVideo item) {
-//        ITEMS.add(item);
-//        ITEM_MAP.put(item.id, item);
-//    }
 }

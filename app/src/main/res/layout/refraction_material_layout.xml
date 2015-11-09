@@ -60,28 +60,10 @@
                     android:layout_below="@+id/text_content"
                     android:layout_toRightOf="@+id/image_test"/>
 
-                <ImageView
-                    android:id="@+id/image_test3"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@+id/image_test" />
-
-                <ImageView
-                    android:id="@+id/image_test4"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@+id/image_test3" />
-
-                <ImageView
-                    android:id="@+id/image_test5"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@+id/image_test4" />
-
                 <com.felipecsl.gifimageview.library.GifImageView
                     android:id="@+id/gifImageView"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
                     android:layout_toRightOf="@+id/image_test"
                     android:layout_below="@+id/text_content"/>
 

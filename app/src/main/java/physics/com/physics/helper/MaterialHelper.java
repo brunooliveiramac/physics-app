@@ -51,6 +51,7 @@ public class MaterialHelper {
         clickableAreaReflection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showProgressBar();
                 callIntent(activity, ReflectionActivity.class);
             }
         });
@@ -58,6 +59,7 @@ public class MaterialHelper {
         clickableAreaRefraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showProgressBar();
                 callIntent(activity, RefractionActivity.class);
 
             }
@@ -66,6 +68,7 @@ public class MaterialHelper {
         clickableAreaDiffraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showProgressBar();
                 callIntent(activity, DiffractionActivity.class);
             }
         });
@@ -73,6 +76,7 @@ public class MaterialHelper {
         clickableAreaResonance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showProgressBar();
                 callIntent(activity, ResonanceActivity.class);
             }
         });
@@ -80,11 +84,15 @@ public class MaterialHelper {
         clickableAreaInterference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
-                loadingText.setVisibility(View.VISIBLE);
+                showProgressBar();
                 callIntent(activity, InterferenceActivity.class);
             }
         });
+    }
+
+    private void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+        loadingText.setVisibility(View.VISIBLE);
     }
 
     //Global method to call intents

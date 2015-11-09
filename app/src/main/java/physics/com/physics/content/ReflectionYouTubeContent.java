@@ -1,5 +1,8 @@
 package physics.com.physics.content;
 
+import android.view.View;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,12 +10,15 @@ import java.util.Map;
 
 import physics.com.physics.model.Video;
 import physics.com.physics.model.YouTubeVideo;
+import physics.com.physics.task.ResourceVideoTask;
 
 /**
  * Created by bruno on 31/10/15.
  */
 public class ReflectionYouTubeContent implements YouTubeContent {
 
+    private static final int CONTENT_CODE = 1;
+    private List<Video> content = new ArrayList<>();
 
     /**
      * An array of YouTube videos
@@ -26,8 +32,19 @@ public class ReflectionYouTubeContent implements YouTubeContent {
     private Map<String, YouTubeVideo> ITEM_MAP = new HashMap<>();
 
     public ReflectionYouTubeContent() {
-        addItem(new YouTubeVideo("fj_LaS2JWUk", "Vídeo 1 - teste teste teste"));
-        addItem(new YouTubeVideo("YhgkqnhicKk", "Vídeo 2 - teste teste teste"));
+        this.fillVideoList();
+    }
+
+    private void fillVideoList() {
+        try {
+            content = new ResourceVideoTask().execute(CONTENT_CODE).get();
+
+            for (Video v : content) {
+                addItem(new YouTubeVideo(v.getUri(), v.getTitle()));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void addItem(final YouTubeVideo item) {
@@ -39,9 +56,12 @@ public class ReflectionYouTubeContent implements YouTubeContent {
         return ITEMS;
     }
 
+    public List<Video> getContent() {
+        return content;
+    }
+
     @Override
     public void setContent(List<Video> content) {
 
     }
-
 }

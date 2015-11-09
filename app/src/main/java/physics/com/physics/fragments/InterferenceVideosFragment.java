@@ -25,6 +25,7 @@ import physics.com.physics.task.ResourceVideoTask;
 public class InterferenceVideosFragment extends Fragment {
 
     private View view;
+    private List<Video> videos = new ArrayList<>();
 
     public InterferenceVideosFragment() {
         //Empty
@@ -49,5 +50,14 @@ public class InterferenceVideosFragment extends Fragment {
         }
 
         return view;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+       //Do something
+    }
+
+    public List<Video> getVideos() {
+        return videos;
     }
 }

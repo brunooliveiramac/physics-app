@@ -7,11 +7,15 @@ import java.util.Map;
 
 import physics.com.physics.model.Video;
 import physics.com.physics.model.YouTubeVideo;
+import physics.com.physics.task.ResourceVideoTask;
 
 /**
  * Created by bruno on 03/11/15.
  */
 public class DiffractionYouTubeContent implements YouTubeContent {
+
+    private static final int CONTENT_CODE = 3;
+    private List<Video> content = new ArrayList<>();
 
     /**
      * An array of YouTube videos
@@ -24,7 +28,18 @@ public class DiffractionYouTubeContent implements YouTubeContent {
     private Map<String, YouTubeVideo> ITEM_MAP = new HashMap<>();
 
     public DiffractionYouTubeContent() {
-        addItem(new YouTubeVideo("gLI_jopCS3Y", "Thiengo babando..."));
+        this.fillVideoList();
+    }
+
+    private void fillVideoList() {
+        try {
+            content = new ResourceVideoTask().execute(CONTENT_CODE).get();
+            for (Video v : content) {
+                addItem(new YouTubeVideo(v.getUri(), v.getTitle()));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
